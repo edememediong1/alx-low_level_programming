@@ -1,24 +1,26 @@
 #include "main.h"
-
 /**
- * print_most_numbers - checks for checks for a digit (0 through 9).
- *
- * Return: Always 0.
+ * print_rev - imprime en reversa
+ * @s: string
+ * return: 0
  */
-void print_most_numbers(void)
+void print_rev(char *s)
 {
- int c;
+	int longi = 0;
+	int o;
 
- for (c = 48; c < 58; c++)
- {
- if (c != 50)
- {
- if (c != 52)
- {
- _putchar(c);
- }
- }
- }
- _putchar('\n');
+	while (*s != '\0')
+	{
+		longi++;
+		s++;
+	}
+	s--;
+	for (o = longi; o > 0; o--)
+	{
+		_putchar(*s);
+		s--;
+	}
+
+	_putchar('\n');
 }
 
